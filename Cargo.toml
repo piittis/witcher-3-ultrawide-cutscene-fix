@@ -1,0 +1,6 @@
+[package]
+name = "witcher3_ultrawide_fix"
+version = "0.1.0"
+authors = ["piittis <parikkapetteri@gmail.com>"]
+
+[dependencies]
