@@ -8,7 +8,7 @@ use std::path::Path;
 
 fn main() {
     match do_patch() {
-        Err(_) => println!("Can't write file, make sure you have permissions (run as adinistrator)"),
+        Err(_) => println!("Can't write file, make sure you have permissions (run as adinistrator if on Windows)"),
         _ => ()
     }
     
@@ -18,7 +18,7 @@ fn main() {
 
 fn do_patch() -> Result<(), io::Error> {
     if !Path::new("./witcher3.exe").exists() {
-        println!("Can't access 'witcher3.exe' in current directory. Make sure the tool is in the same directory as 'witcher3.exe' (<game_root>/bin/x64/) and you have permissions (run as administrator).");
+        println!("Can't access 'witcher3.exe' in current directory. Make sure the tool is in the same directory as 'witcher3.exe' (<game_root>/bin/x64/) and you have permissions (run as administrator if on Windows).");
         return Ok(());
     }
 
