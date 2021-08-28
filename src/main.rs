@@ -47,13 +47,14 @@ fn do_patch() -> Result<(), io::Error> {
 fn get_patch_bytes() -> [u8; 4] {
     loop {
         let mut input = String::new();
-        println!("Select resolution (1: 3440x1440, 2: 2560x1080, 3: 5120x1440 or 3840x1080): ");
+        println!("Select resolution (1: 3440x1440, 2: 2560x1080, 3: 5120x1440 or 3840x1080, 4: 3840x1600): ");
         io::stdin().read_line(&mut input).expect("Problem reading input");
         match input.trim() {
             "1" => return [0x8E, 0xE3, 0x18, 0x40],
             "2" => return [0x24, 0xB4, 0x17, 0x40],
             "3" => return [0x39, 0xBE, 0x63, 0x40],
-            _ => println!("Wrong input, please select 1, 2 or 3")
+            "4" => return [0x9a, 0x99, 0x19, 0x40],
+            _ => println!("Wrong input, please select 1, 2, 3 or 4")
         }
     }
 }
