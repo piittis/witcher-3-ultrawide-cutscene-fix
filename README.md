@@ -7,4 +7,6 @@ Fixes black bars in cutscenes when using an ultrawide monitor.
 3. Run the tool and follow instructions
 
 ### Versions tested:
-* 4.0 (Steam) next-gen
+* 1.32 (Steam)
+* 1.31 (GoG)
+* 4.0 next-gen (Steam)
